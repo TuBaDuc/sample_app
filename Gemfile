@@ -5,6 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', '5.0.0.1'
 #Bootstrap
 gem 'bootstrap-sass', '3.3.6'
+
+gem 'bcrypt',         '3.1.11'
+
 # Use Puma as the app server
 gem 'puma', '3.4.0'
 # Use SCSS for stylesheets
