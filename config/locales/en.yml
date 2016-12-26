@@ -51,3 +51,15 @@ en:
   intro: "This is the home page for the
           <a href=\"http://www.railstutorial.org/\">Ruby on Rails Tutorial</a>
           sample application."
+#User edit
+  user_edit_title: "Update your profile"
+  user_edit_save_change: "Save changes"
+  user_edit_profile_updated: "Profile updated"
+  user_edit: "Edit user"
+
+  please_login: "Please log in."
+
+  #View all user
+  all_user: "All users"
+  user_deleted: "User deleted"
+  delete_confirm: "You sure?"
