@@ -21,3 +21,7 @@
 
 en:
   hello: "Hello world"
+  greeting: "Welcome to the Sample App!"
+  signup: "Sign up"
+  confirmation: "Confirmation"
+  create_my_account: "Create my account"
