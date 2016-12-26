@@ -21,3 +21,17 @@
 
 en:
   hello: "Hello world"
+  greeting: "Welcome to the Sample App!"
+  signup: "Sign up"
+  create_my_account: "Create my account"
+  confirmtion: "Confirmation"
+#session:
+#  new:
+  login: "Log in"
+  signupnow: "Sign up now!"
+  logout: "Log out"
+  profile: "Profile"
+  settings: "Settings"
+  users: "Users"
+  help: "Help"
+  home: "Home"
