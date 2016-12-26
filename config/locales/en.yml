@@ -23,5 +23,43 @@ en:
   hello: "Hello world"
   greeting: "Welcome to the Sample App!"
   signup: "Sign up"
-  confirmation: "Confirmation"
   create_my_account: "Create my account"
+  confirmation: "Confirmation"
+  base_tilte: "Ruby on Rails Tutorial Sample App"
+#session:
+#  login:
+  login: "Log in"
+  signupnow: "Sign up now!"
+  remember: "Remember me on this computer"
+#header
+  logout: "Log out"
+  profile: "Profile"
+  settings: "Settings"
+  users: "Users"
+  help: "Help"
+  home: "Home"
+  invalid_email_password: "Invalid email/password combination"
+#footer
+  about: "About"
+  contact: "Contact"
+  news: "News"
+  book_name: "The <a href=\"http://www.railstutorial.org/\">
+              Ruby on Rails Tutorial</a>"
+  author: "by <a href=\"http://www.michaelhartl.com/\">Michael Hartl</a>"
+#home
+  welcome: "Welcome to the Sample App"
+  intro: "This is the home page for the
+          <a href=\"http://www.railstutorial.org/\">Ruby on Rails Tutorial</a>
+          sample application."
+#User edit
+  user_edit_title: "Update your profile"
+  user_edit_save_change: "Save changes"
+  user_edit_profile_updated: "Profile updated"
+  user_edit: "Edit user"
+
+  please_login: "Please log in."
+
+  #View all user
+  all_user: "All users"
+  user_deleted: "User deleted"
+  delete_confirm: "You sure?"
