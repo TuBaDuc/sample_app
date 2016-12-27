@@ -69,3 +69,12 @@ en:
   account_active_fail: "Invalid activation link"
   account_active_fail_login: "Account not activated. \
   Check your email for the activation link."
+
+# Forget password
+  forget_pass_title: "Forgot password"
+  pass_reset_success_mess: "Email sent with password reset instructions"
+  pass_reset_fail_mess: "Email address not found"
+  submit: "Submit"
+  reset_pass_title: "Reset password"
+  password_expired: "Password reset has expired."
+  password_cant_empty: "can't be empty"
