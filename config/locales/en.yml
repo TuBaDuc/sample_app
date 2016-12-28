@@ -78,3 +78,18 @@ en:
   reset_pass_title: "Reset password"
   password_expired: "Password reset has expired."
   password_cant_empty: "can't be empty"
+
+# Microposts
+  micropost_feed: "Micropost Feed"
+  alt_rails_logo: "Rails logo"
+  micropost_created: "Micropost created!"
+  micropost_deleted: "Micropost deleted"
+  image_size_validate_mess: "should be less than 5MB"
+  image_size_jscheck_mess: "Maximum file size is 5MB. Please choose a smaller file."
+  post: "Post"
+  compose_new_micropost: "Compose new micropost..."
+  delete_label: "delete"
+  posted_label: "Posted"
+  ago_label: "ago."
+  view_my_profile_link: "view my profile"
+  password_has_been_reset: "Password has been reset."
