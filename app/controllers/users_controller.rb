@@ -12,6 +12,9 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_id(params[:id])
+    verify_nil and return
+
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def create
@@ -27,11 +30,12 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find_by_id(params[:id])
+    verify_nil
   end
 
   def update
     @user = User.find_by_id(params[:id])
-    if @user.update_attributes(user_params)
+    if @user != nil && @user.update_attributes(user_params)
       flash[:success] = t :user_edit_profile_updated
       redirect_to @user
     else
@@ -52,20 +56,18 @@ class UsersController < ApplicationController
         :password_confirmation)
   end
 
-  def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = t :please_login
-      redirect_to login_url
-    end
-  end
-
   def correct_user
     @user = User.find_by_id(params[:id])
-    redirect_to root_url unless current_user?(@user)
+    redirect_to root_url unless @user != nil && current_user?(@user)
   end
 
   def admin_user
     redirect_to root_url unless current_user.admin?
+  end
+
+  def verify_nil
+    if @user.nil?
+      redirect_to root_url and return true
+    end
   end
 end
