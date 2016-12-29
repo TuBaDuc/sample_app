@@ -2,6 +2,7 @@ class UsersController < ApplicationController
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
+  before_action :verify_user!, only: [:show, :edit, :following, :followers]
   def new
     @user = User.new
   end
@@ -11,9 +12,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find_by_id(params[:id])
-    verify_nil and return
-
     @microposts = @user.microposts.paginate(page: params[:page])
   end
 
@@ -29,12 +27,10 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find_by_id(params[:id])
-    verify_nil
   end
 
   def update
-    @user = User.find_by_id(params[:id])
+    @user = User.find_by id: params[:id]
     if @user != nil && @user.update_attributes(user_params)
       flash[:success] = t :user_edit_profile_updated
       redirect_to @user
@@ -44,7 +40,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find_by_id(params[:id]).destroy
+    User.find_by(id: params[:id]).destroy
     flash[:success] = t :user_deleted
     redirect_to users_url
   end
@@ -57,7 +53,7 @@ class UsersController < ApplicationController
   end
 
   def correct_user
-    @user = User.find_by_id(params[:id])
+    @user = User.find_by id: params[:id]
     redirect_to root_url unless @user != nil && current_user?(@user)
   end
 
@@ -65,9 +61,11 @@ class UsersController < ApplicationController
     redirect_to root_url unless current_user.admin?
   end
 
-  def verify_nil
+  def verify_user!
+    @user = User.find_by id: params[:id] || params[:user_id]
     if @user.nil?
-      redirect_to root_url and return true
+      flash[:danger] = t :user_nil_mess
+      redirect_to root_url
     end
   end
 end
