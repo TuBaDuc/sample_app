@@ -93,3 +93,11 @@ en:
   ago_label: "ago."
   view_my_profile_link: "view my profile"
   password_has_been_reset: "Password has been reset."
+
+# Folling user
+  following: "Following"
+  followers: "Followers"
+  update_password: "Update password"
+  follow_btn: "Follow"
+  unfollow_btn: "Unfollow"
+  user_nil_mess: "User is not found"
